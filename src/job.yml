@@ -3,7 +3,7 @@ code: model
 command: >-
   python train.py
   --training_data ${{input.training_data}}
-  --reg_rate ${{input.reg_rate}}
+  --reg_rate ${{inputs.reg_rate}}
 inputs:
   training_data: 
     type: uri_folder
@@ -12,4 +12,4 @@ inputs:
 environment: azureml://registries/azureml/environments/sklearn-1.1/versions/7
 compute: AOG1
 experiment_name: diabetes-test
-description: Trainind diabetic model
+description: Training diabetic model
